@@ -26,7 +26,7 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
 > **Why it is convenient**
 > - One button instead of settings: subscription, "Connect", that's it.
 > - Banks, government services and marketplaces keep working with the VPN
->   on: sites in your country bypass it.
+>   on: sites in your country open directly, without it.
 > - Your internet provider cannot see which sites you open through the
 >   VPN.
 > - You can route just Telegram through the VPN - in two clicks.
@@ -141,8 +141,8 @@ you bring it back. Off by default.
 
 **Start with "What is wrong?"** under "Diagnostics". KVN checks
 everything step by step and tells you in plain words where the problem
-is: the subscription ended, the server is down, the provider cuts the
-connection, an antivirus removed files.
+is: the subscription ended, the server does not answer, the connection
+from your network does not reach the server, an antivirus removed files.
 
 **The internet is gone and KVN will not open** (only possible with
 traffic blocking on). Restart the computer - the blocking does not
@@ -208,8 +208,8 @@ Everything KVN created goes away, including autostart and Windows rules.
 - **Sleep and network changes.** After sleep or switching from Wi-Fi to
   mobile internet KVN does not reconnect by itself: disconnect and
   connect again. Tell us how it goes for you - it helps.
-- **The anti-blocking setting** (fragmentation) does not help with every
-  provider.
+- **Fragmentation** - a setting for an unstable connection to the
+  server - does not help on every network.
 - **Windows traces.** After removal, records kept by Windows itself stay:
   the network adapter driver, network entries, network usage history. No
   program removes them.
