@@ -144,10 +144,10 @@ KVN 连接你的 VPN 服务商提供的服务器：粘贴订阅，点击「连�
 
 对于没有签名的程序，Windows 首次运行时会弹出蓝色的 SmartScreen 窗口。点击「更多信息」-「仍要运行」。
 
-确认文件确实来自这里：按 `Win+R`，输入 `cmd`，回车，然后执行
+确认文件确实来自这里：打开文件所在的下载文件夹，点击资源管理器顶部的地址栏，输入 `cmd` 并回车。在打开的窗口中执行
 
 ```
-certutil -hashfile "%USERPROFILE%\Downloads\KVN-Setup-1.0.0.exe" SHA256
+certutil -hashfile KVN-Setup-1.0.0.exe SHA256
 ```
 
 得到的那串字母和数字必须与发布说明中的 SHA256 一致。不一致就不要运行。

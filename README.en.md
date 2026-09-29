@@ -220,10 +220,12 @@ Everything KVN created goes away, including autostart and Windows rules.
 Windows greets unsigned programs with a blue SmartScreen window on first
 launch. Click "More info" - "Run anyway".
 
-To make sure the file is from here: `Win+R` - `cmd` - Enter, then
+To make sure the file is from here: open the folder it was downloaded
+to, click the Explorer address bar at the top, type `cmd` and press Enter.
+In the window that opens run
 
 ```
-certutil -hashfile "%USERPROFILE%\Downloads\KVN-Setup-1.0.0.exe" SHA256
+certutil -hashfile KVN-Setup-1.0.0.exe SHA256
 ```
 
 The string of letters and digits must match the SHA256 in the release
