@@ -52,7 +52,7 @@ KVN 连接你的 VPN 服务商提供的服务器：粘贴订阅，点击「连�
 
 - Windows 10（22H2）或 Windows 11，64 位。
 - 管理员权限：KVN 需要创建网络适配器。
-- VPN 服务商提供的订阅或链接。几乎所有给 Happ、v2rayN、Hiddify 用的都可以：VLESS（含 Reality）、VMess、Trojan、Shadowsocks、Hysteria2、SOCKS5。
+- VPN 服务商提供的订阅或链接。几乎所有给 Happ、v2rayN、Hiddify 用的都可以：VLESS（含 Reality）、VMess、Trojan、Shadowsocks、Hysteria2、SOCKS5。Amnezia 密钥（`vpn://...`）、WireGuard 和 OpenVPN 不适用，它们是其他协议。
 
 ## 安装
 

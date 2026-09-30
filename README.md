@@ -56,7 +56,8 @@ KVN подключается к серверам вашего VPN-провайд
 - Права администратора: KVN создаёт сетевой адаптер.
 - Подписка или ссылка от вашего VPN-провайдера. Подходит почти всё, что
   выдают для Happ, v2rayN и Hiddify: VLESS (включая Reality), VMess,
-  Trojan, Shadowsocks, Hysteria2, SOCKS5.
+  Trojan, Shadowsocks, Hysteria2, SOCKS5. Ключи Amnezia (`vpn://...`),
+  WireGuard и OpenVPN не подойдут - это другие протоколы.
 
 ## Установка
 

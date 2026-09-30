@@ -61,7 +61,8 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
 - Administrator rights: KVN creates a network adapter.
 - A subscription or link from your VPN provider. Almost anything issued
   for Happ, v2rayN or Hiddify works: VLESS (including Reality), VMess,
-  Trojan, Shadowsocks, Hysteria2, SOCKS5.
+  Trojan, Shadowsocks, Hysteria2, SOCKS5. Amnezia keys (`vpn://...`),
+  WireGuard and OpenVPN will not work - those are other protocols.
 
 ## Installation
 
