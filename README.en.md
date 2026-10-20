@@ -4,15 +4,17 @@
 
 **Private. Simple. Human.**
 
-VPN client for Windows
+VPN client for Windows and Android
 
 [Русский](README.md) · **English** · [中文](README.zh.md)
 
-### [⬇ Download for Windows](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)
+### [⬇ Download for Windows and Android](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)
 
 </div>
 
 ![KVN main window](assets/main.png)
+
+On a phone - [KVN for Android](#android).
 
 KVN connects to the servers of your VPN provider: paste your
 subscription, press "Connect" - done. Free, no ads, no sign-up.
@@ -32,6 +34,8 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
 > - You can route just Telegram through the VPN - in two clicks.
 > - The "What is wrong?" button tells you in plain words what broke and
 >   whom to contact.
+> - On a phone it switches to mobile-network servers by itself when the
+>   usual ones do not answer there, and goes back on Wi-Fi.
 >
 > [More](#useful)
 
@@ -46,16 +50,17 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
 
 > [!WARNING]
 > **Honest about limits**
-> - The file is not signed: Windows shows a warning on first launch.
+> - The file is not signed: Windows shows a warning on first launch,
+>   Android asks to allow installing from the browser.
 > - Browsers and Telegram calls do not work in "Proxy" mode - use TUN
 >   mode for them.
-> - After sleep or a network change KVN does not reconnect by itself.
+> - KVN for Android is not on Google Play - only the APK from here.
 >
 > [More](#limits)
 
 ---
 
-## What you need
+## What you need on Windows
 
 - Windows 10 (22H2) or Windows 11, 64-bit.
 - Administrator rights: KVN creates a network adapter.
@@ -64,9 +69,9 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
   Trojan, Shadowsocks, Hysteria2, SOCKS5. Amnezia keys (`vpn://...`),
   WireGuard and OpenVPN will not work - those are other protocols.
 
-## Installation
+## Installing on Windows
 
-1. Download `KVN-Setup-1.0.0.exe` from the
+1. Download `KVN-Setup-1.0.1.exe` from the
    [releases page](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest).
 2. Run it. Windows shows a blue "Windows protected your PC" window -
    click **"More info"**, then **"Run anyway"**. [Why](#smartscreen).
@@ -110,9 +115,15 @@ and your provider sees them - they are reached directly anyway.
 pasted straight from the browser's address bar - its subdomains go with
 it.
 
+**Always through the VPN.** The opposite list: a site in your country
+that should still go through the VPN (for example, to see the VPN
+server's address) - even while the other sites of your country go
+directly.
+
 **Only the programs you need go through the VPN.** Choose, for example,
 a browser and Discord - only they use the VPN, everything else goes
-directly.
+directly. A program can be picked from the list of running ones - with
+icons and clear names, no hunting for the exe in folders.
 
 **Two modes.**
 - **TUN - all traffic** (default): the whole computer goes through the
@@ -128,7 +139,14 @@ you bring it back. Off by default.
 
 **Small things that save time.**
 - Latency is measured through the server itself - the number you will
-  get after connecting, not "1 ms" to the nearest router.
+  get after connecting, not "1 ms" to the nearest router. It says which
+  network it was measured on; when the network changes, old numbers are
+  cleared.
+- Moved to another network (home, office, cable) - KVN reconnects to the
+  same server by itself, so your country's sites use the new network's
+  DNS.
+- Country databases (which sites and addresses are "yours") update by
+  themselves, without a new KVN version, and are checked by signature.
 - Remaining traffic and subscription end date are shown in the list if
   your provider reports them. KVN warns three days before the end.
 - Start with Windows - straight to the tray, optionally connected.
@@ -178,8 +196,8 @@ Everything KVN created goes away, including autostart and Windows rules.
     address and country;
   - `gstatic.com` - when checking latency, through the server being
     checked;
-  - GitHub - once a day, for the latest version number (can be turned
-    off in settings).
+  - GitHub - once a day, for the latest version number and fresh country
+    databases if they are out (can be turned off in settings).
 - **The proxy is password-protected.** Most VPN clients leave an open
   entrance on the computer through which any program can go around your
   settings and learn your server address. KVN closes it with a login and
@@ -206,9 +224,11 @@ Everything KVN created goes away, including autostart and Windows rules.
   by file name: two browsers named `chrome.exe` go together. Windows
   sometimes cannot link very short connections to a program in time, and
   they go directly.
-- **Sleep and network changes.** After sleep or switching from Wi-Fi to
-  mobile internet KVN does not reconnect by itself: disconnect and
-  connect again. Tell us how it goes for you - it helps.
+- **Computer sleep.** After a move to another network KVN reconnects by
+  itself, and after sleep on the same network the tunnel simply keeps
+  working. This has not been checked on many machines yet: if sites do
+  not open after sleep, disconnect and connect again - and tell us, it
+  helps.
 - **Fragmentation** - a setting for an unstable connection to the
   server - does not help on every network.
 - **Windows traces.** After removal, records kept by Windows itself stay:
@@ -226,7 +246,7 @@ to, click the Explorer address bar at the top, type `cmd` and press Enter.
 In the window that opens run
 
 ```
-certutil -hashfile KVN-Setup-1.0.0.exe SHA256
+certutil -hashfile KVN-Setup-1.0.1.exe SHA256
 ```
 
 The string of letters and digits must match the SHA256 in the release
@@ -234,6 +254,59 @@ description. If it does not match - do not run it.
 
 An antivirus may be wary too: KVN creates a network adapter and starts
 the Xray core. Add KVN to exceptions only if the checksum matched.
+
+<a id="android"></a>
+## KVN for Android
+
+**What you need.** Android 8 or newer, a phone or tablet with an ARM
+processor (almost all of them). The same subscription as for your
+computer.
+
+**Installation.**
+1. On the phone, open the
+   [releases page](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)
+   and tap `KVN-1.0.1.apk`.
+2. Open the downloaded file. Android asks whether the browser may install
+   apps - allow it (this applies to the browser only, you can turn it off
+   later).
+3. **"Install"**. Google Play Protect may ask about an app from an
+   unknown developer - **"Install anyway"**.
+4. Open KVN, paste your subscription or scan its QR code - and the big
+   button in the middle.
+
+Already have KVN on a computer - on the phone tap "+", "Transfer from PC (backup)" and
+pick the backup from KVN for Windows: subscriptions and servers move
+together with your choice.
+
+**What it does.**
+- Sites and apps of your country go directly, the rest through the VPN,
+  as on the computer; your own exceptions and "Always through VPN" too.
+- Split by apps both ways: "only the chosen ones through the VPN" or
+  "all except the chosen ones" (banks and government apps around the
+  VPN).
+- Mobile network: if the usual server does not answer there, KVN
+  switches by itself to a mobile-network server (marked "LTE" or
+  "whitelist" by the provider) and goes back on Wi-Fi.
+- Switching servers does not drop the VPN: no traffic goes out directly,
+  not even for a second.
+- A quick settings tile, Android always-on VPN and "Block connections
+  without VPN".
+- Subscriptions update by themselves, only through the VPN - you choose
+  how often.
+- Latency is measured through the server, marked with the network; time
+  online on the main screen.
+- Once a day KVN checks for a new version and gives you a link to the
+  APK. It installs nothing by itself.
+- Русский, English, 中文.
+
+**Honest about limits.**
+- Not on Google Play: update with a new APK from here, over the old one -
+  servers and settings are kept.
+- Some phone skins (Xiaomi, Huawei, Honor, Samsung and others) unload a
+  VPN in the background to save battery. KVN settings have a button and
+  a hint on what to turn on for your phone.
+- The APK is signed with the author's key: check it is from here by the
+  SHA256 in the release notes.
 
 ## Support the author
 
