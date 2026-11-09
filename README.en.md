@@ -71,7 +71,7 @@ subscription, press "Connect" - done. Free, no ads, no sign-up.
 
 ## Installing on Windows
 
-1. Download `KVN-Setup-1.0.1.exe` from the
+1. Download `KVN-Setup-1.0.2.exe` from the
    [releases page](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest).
 2. Run it. Windows shows a blue "Windows protected your PC" window -
    click **"More info"**, then **"Run anyway"**. [Why](#smartscreen).
@@ -246,7 +246,7 @@ to, click the Explorer address bar at the top, type `cmd` and press Enter.
 In the window that opens run
 
 ```
-certutil -hashfile KVN-Setup-1.0.1.exe SHA256
+certutil -hashfile KVN-Setup-1.0.2.exe SHA256
 ```
 
 The string of letters and digits must match the SHA256 in the release
@@ -265,7 +265,7 @@ computer.
 **Installation.**
 1. On the phone, open the
    [releases page](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)
-   and tap `KVN-1.0.1.apk`.
+   and tap `KVN-1.0.2.apk`.
 2. Open the downloaded file. Android asks whether the browser may install
    apps - allow it (this applies to the browser only, you can turn it off
    later).

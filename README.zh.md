@@ -59,7 +59,7 @@ KVN 连接你的 VPN 服务商提供的服务器：粘贴订阅，点击「连�
 
 ## 在 Windows 上安装
 
-1. 在[发布页面](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)下载 `KVN-Setup-1.0.1.exe`。
+1. 在[发布页面](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)下载 `KVN-Setup-1.0.2.exe`。
 2. 运行它。Windows 会显示蓝色的「Windows 已保护你的电脑」窗口，点击 **「更多信息」**，再点 **「仍要运行」**。[为什么会这样](#smartscreen)。
 3. 选择安装文件夹（默认是 `Program Files`，保持默认即可），点击 **「安装」**。
 4. 点击 **「完成」**，KVN 会出现在桌面和「开始」菜单中。
@@ -154,7 +154,7 @@ KVN 连接你的 VPN 服务商提供的服务器：粘贴订阅，点击「连�
 确认文件确实来自这里：打开文件所在的下载文件夹，点击资源管理器顶部的地址栏，输入 `cmd` 并回车。在打开的窗口中执行
 
 ```
-certutil -hashfile KVN-Setup-1.0.1.exe SHA256
+certutil -hashfile KVN-Setup-1.0.2.exe SHA256
 ```
 
 得到的那串字母和数字必须与发布说明中的 SHA256 一致。不一致就不要运行。
@@ -167,7 +167,7 @@ certutil -hashfile KVN-Setup-1.0.1.exe SHA256
 **使用条件。** Android 8 或更高版本，ARM 处理器的手机或平板（几乎所有设备）。订阅和电脑上用的一样。
 
 **安装。**
-1. 在手机上打开[发布页面](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)，点击 `KVN-1.0.1.apk`。
+1. 在手机上打开[发布页面](https://github.com/DjFatMaxx/KVN-VPN-Client/releases/latest)，点击 `KVN-1.0.2.apk`。
 2. 打开下载的文件。Android 会询问是否允许浏览器安装应用，请允许（只针对浏览器，之后可以关闭）。
 3. 点击「安装」。Google Play 保护机制可能会询问来自未知开发者的应用，选择「仍然安装」。
 4. 打开 KVN，粘贴订阅或扫描订阅二维码，然后点中间的大按钮。
